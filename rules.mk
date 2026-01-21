@@ -1,0 +1,16 @@
+# digger8/rules.mk
+MCU        = RP2040
+BOOTLOADER = rp2040
+
+# QMK features
+BOOTMAGIC_ENABLE = yes
+MOUSEKEY_ENABLE  = no
+EXTRAKEY_ENABLE  = yes
+CONSOLE_ENABLE   = yes
+COMMAND_ENABLE   = no
+NKRO_ENABLE      = yes
+RGBLIGHT_ENABLE  = no
+RGB_MATRIX_ENABLE = no
+AUDIO_ENABLE     = no
+LTO_ENABLE       = yes
+
