@@ -8,6 +8,15 @@ enum { _BASE, _FN };
 #define SPCL KC_SPC   // left space
 #define SPCR KC_SPC   // right space
 
+const key_override_t pgup_override = ko_make_basic(MOD_MASK_ALT, KC_HOME, KC_PGUP);
+const key_override_t pgdn_override = ko_make_basic(MOD_MASK_ALT, KC_END, KC_PGDN);
+
+const key_override_t **key_overrides = (const key_override_t *[]){
+  &pgup_override,
+  &pgdn_override,
+  NULL
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* ┌───────────────────── Left ────────────────────────┐   ┌──────────────────────────────────────────── Right ─────────────────────────────────────────────┐ */
 [_BASE] = LAYOUT(
@@ -28,4 +37,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*R5*/  _______,_______,_______,       _______,_______,      _______,                        _______,_______,_______, _______,_______,_______
 )
 };
-
