@@ -11,7 +11,7 @@ enum { _BASE, _FN };
 const key_override_t pgup_override = ko_make_basic(MOD_MASK_ALT, KC_HOME, KC_PGUP);
 const key_override_t pgdn_override = ko_make_basic(MOD_MASK_ALT, KC_END, KC_PGDN);
 
-const key_override_t **key_overrides = (const key_override_t *[]){
+const key_override_t *key_overrides[] = {
   &pgup_override,
   &pgdn_override,
   NULL
